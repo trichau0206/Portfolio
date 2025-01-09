@@ -2,68 +2,99 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Tri Chau</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<div id="header"> 
+<header id="header"> 
     <section class="container">
         <nav>
-            <img src="image/logo.png" class="logo">
+            <img src="" class="logo" alt="Logo">
             <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="header-text">
-            <p>Coding Student</p>
-
+            <h1>Hi, I'm Tri</h1>
+            <p>A Passionate Coding Student</p>
         </div>
     </section>
-</div>
+</header>
 
-<div id="about">
-    <div class="container">
+<main>
+    <!-- About Section -->
+    <section id="about" class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="image/icons8-jetpack-joyride-150.png">
+                <img src="image/icons8-jetpack-joyride-150.png" alt="Jetpack Joyride Icon">
             </div>
             <div class="about-col-2">
                 <h1 class="sub">About Me</h1>
-                <p>My name is Tri. I'm a newbie in tech and need to learn more. </p>
+                <p>My name is Tri, a budding developer passionate about learning and creating. I'm currently exploring web development and problem-solving with code.</p>
+                <p>When I'm not coding, I enjoy reading tech blogs and exploring innovative solutions to everyday problems.</p>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<div id="work">
-    <div class="container">
+    <!-- Work Section -->
+    <section id="work" class="container">
         <h1 class="sub">Work</h1>
-        <a href="https://github.com/trichau0206/homework-1">Fist work in code.</a>
-    </div>
-</div>
-<div id="resume">
-    <div class="container">
-        <h2 class="sub">Resume</h2> 
-    </div>
-</div>
-<div id="contac">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-tittle">Contact Me</h1>
-                <p>trichau.0206@gmail.com</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            </div>
-            </div>
-            
+        <div class="work-item">
+            <p><a href="https://github.com/trichau0206/homework-1" target="_blank" rel="noopener">First Project: Basic HTML/CSS</a> - A simple webpage created to practice HTML and CSS basics.</p>
         </div>
+        <div class="work-item">
+            <p><a href="https://github.com/trichau0206/project-2" target="_blank" rel="noopener">Project 2: JavaScript Calculator</a> - A functional calculator built using JavaScript, HTML, and CSS.</p>
+        </div>
+    </section>
 
+    <!-- Resume Section -->
+    <section id="resume" class="container">
+        <h2 class="sub">Resume</h2>
+        <p>Download my resume for more details on my skills and experience:</p>
+        <a href="files/Tri_Chau_Resume.pdf" class="btn" download>Download Resume</a>
+    </section>
+</main>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+    <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-tittle">Contact Me</h1>
+            <p>Email: <a href="mailto:trichau.0206@gmail.com">trichau.0206@gmail.com</a></p>
+            <p>Feel free to reach out via email</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Tri Chau. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Smooth scrolling for navigation links
+    $('nav ul li a').on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800);
+        }
+    });
+</script>
 </body>
 </html>
